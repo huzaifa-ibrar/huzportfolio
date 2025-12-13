@@ -248,6 +248,14 @@ body {
     z-index: 1;
 }
 
+.hero-badges {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    animation: fadeIn 1s ease;
+    flex-wrap: wrap;
+}
+
 .hero-badge {
     display: inline-block;
     padding: 0.6rem 1.5rem;
@@ -257,8 +265,6 @@ body {
     color: var(--primary-gold);
     font-size: 0.9rem;
     font-weight: 600;
-    margin-bottom: 2rem;
-    animation: fadeIn 1s ease;
 }
 
 .hero-title {
