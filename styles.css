@@ -967,10 +967,22 @@ section {
     transform: translateY(-3px);
 }
 
-.contact-form-container {
-    max-width: 800px;
-    margin: 0 auto;
-}
+    .contact-form-container {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+    
+    /* Mobile: Make form wider */
+    @media (max-width: 768px) {
+        .contact-form-container {
+            max-width: 100%;
+            padding: 0 1rem;
+        }
+        
+        .contact-form {
+            max-width: 100%;
+        }
+    }
 
 .contact-form {
     background: linear-gradient(135deg, rgba(26, 26, 26, 0.9) 0%, rgba(212, 175, 55, 0.05) 100%);
@@ -1513,13 +1525,15 @@ section {
     }
 
     .contact-form {
-        padding: 1.5rem;
+        padding: 2rem 1.5rem;
+        width: 100%;
     }
 
     .form-group input,
     .form-group textarea {
         padding: 0.9rem;
         font-size: 0.95rem;
+        width: 100%;
     }
 
     .footer {

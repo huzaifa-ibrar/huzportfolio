@@ -218,9 +218,13 @@ const observer = new IntersectionObserver((entries) => {
 // Observe elements
 const animatedElements = document.querySelectorAll('.skill-column, .experience-card, .project-card, .contact-info-card');
 animatedElements.forEach(el => {
+    // Faster animation for skill columns on mobile
+    const isMobileSkill = el.classList.contains('skill-column') && window.innerWidth <= 768;
+    const duration = isMobileSkill ? '0.3s' : '0.8s';
+    
     el.style.opacity = '0';
     el.style.transform = 'translateY(30px)';
-    el.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+    el.style.transition = `opacity ${duration} ease, transform ${duration} ease`;
     observer.observe(el);
 });
 
@@ -329,9 +333,14 @@ document.querySelectorAll('.btn').forEach(btn => {
 
 // Skill items animation
 document.querySelectorAll('.skill-item').forEach((item, index) => {
+    // Faster animation on mobile, especially for swipe
+    const isMobile = window.innerWidth <= 768;
+    const duration = isMobile ? '0.2s' : '0.5s';
+    const delay = isMobile ? index * 0.02 : index * 0.05;
+    
     item.style.opacity = '0';
     item.style.transform = 'translateX(-20px)';
-    item.style.transition = `opacity 0.5s ease ${index * 0.05}s, transform 0.5s ease ${index * 0.05}s`;
+    item.style.transition = `opacity ${duration} ease ${delay}s, transform ${duration} ease ${delay}s`;
     
     const skillObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
@@ -340,7 +349,7 @@ document.querySelectorAll('.skill-item').forEach((item, index) => {
                 entry.target.style.transform = 'translateX(0)';
             }
         });
-    }, { threshold: 0.5 });
+    }, { threshold: isMobile ? 0.1 : 0.5 });
     
     skillObserver.observe(item);
 });
@@ -477,6 +486,14 @@ function initializeSwipe(wrapperId, indicatorsId) {
         
         dots.forEach((dot, index) => {
             dot.classList.toggle('active', index === currentIndex);
+        });
+        
+        // Trigger animations immediately on slide change
+        const currentItem = items[currentIndex];
+        const skillItems = currentItem.querySelectorAll('.skill-item');
+        skillItems.forEach(item => {
+            item.style.opacity = '1';
+            item.style.transform = 'translateX(0)';
         });
     }
     
