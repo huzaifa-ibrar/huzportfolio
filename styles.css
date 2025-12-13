@@ -1037,7 +1037,128 @@ section {
     color: var(--primary-gold);
 }
 
-/* Responsive Design */
+/* Mobile Swipe Containers */
+.mobile-swipe-container {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .mobile-swipe-container {
+        display: block;
+        position: relative;
+        overflow: hidden;
+        padding: 0 0 4rem 0;
+        margin: 0 -1.5rem;
+    }
+
+    .swipe-wrapper {
+        display: flex;
+        transition: transform 0.3s ease-out;
+        touch-action: pan-y;
+        padding: 0 1.5rem;
+    }
+
+    .swipe-item {
+        min-width: calc(100% - 3rem);
+        max-width: calc(100% - 3rem);
+        flex-shrink: 0;
+        padding: 0 1rem;
+        box-sizing: border-box;
+    }
+    
+    /* Ensure cards fit within container */
+    .swipe-item .skill-column,
+    .swipe-item .project-card,
+    .swipe-item .contact-info-card {
+        width: 100%;
+        max-width: 100%;
+        margin: 0 auto;
+        box-sizing: border-box;
+    }
+    
+    /* Adjust project card sizing for mobile */
+    .mobile-swipe-container .project-card {
+        padding: 2rem 1.5rem;
+        height: auto;
+        min-height: 0;
+    }
+    
+    .mobile-swipe-container .project-card.featured {
+        padding: 2rem 1.5rem;
+    }
+
+    .swipe-indicators {
+        display: flex;
+        justify-content: center;
+        gap: 0.5rem;
+        margin-top: 1.5rem;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .swipe-dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: rgba(212, 175, 55, 0.3);
+        transition: all 0.3s ease;
+        cursor: pointer;
+    }
+
+    .swipe-dot.active {
+        background: var(--primary-gold);
+        width: 24px;
+        border-radius: 4px;
+    }
+
+    .swipe-hint {
+        text-align: center;
+        color: var(--dark-gold);
+        font-size: 0.85rem;
+        margin-top: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        animation: fadeInOut 2s ease-in-out infinite;
+    }
+
+    .swipe-hint i {
+        font-size: 1rem;
+    }
+
+    @keyframes fadeInOut {
+        0%, 100% { opacity: 0.5; }
+        50% { opacity: 1; }
+    }
+
+    /* Hide desktop grids on mobile */
+    .skills-container.desktop-only,
+    .projects-grid.desktop-only,
+    .contact-info-grid.desktop-only {
+        display: none !important;
+    }
+
+    /* Show mobile swipe versions */
+    .skills-container.mobile-swipe-container,
+    .projects-grid.mobile-swipe-container,
+    .contact-info-grid.mobile-swipe-container {
+        display: block !important;
+    }
+}
+
+/* Desktop - hide swipe containers */
+@media (min-width: 769px) {
+    .mobile-swipe-container {
+        display: none !important;
+    }
+
+    .desktop-only {
+        display: grid !important;
+    }
+}
 @media (max-width: 1400px) {
     .hero-container {
         max-width: 1200px;
@@ -1133,6 +1254,7 @@ section {
 @media (max-width: 768px) {
     body {
         cursor: auto;
+        overflow-x: hidden;
     }
 
     #cursor-trail {
@@ -1159,11 +1281,20 @@ section {
 
     .main-content {
         margin-left: 0;
+        overflow-x: hidden;
     }
 
     .hero-section {
         padding: 5rem 1.5rem 3rem;
         min-height: auto;
+    }
+    
+    section {
+        overflow-x: hidden;
+    }
+    
+    .section-container {
+        overflow-x: hidden;
     }
 
     .hero-title {
@@ -1346,20 +1477,25 @@ section {
     }
 
     .project-card {
-        padding: 2rem 1.5rem;
+        padding: 1.5rem 1.2rem;
+    }
+
+    .mobile-swipe-container .project-card {
+        padding: 1.5rem 1.2rem;
     }
 
     .project-title {
-        font-size: 1.5rem;
+        font-size: 1.4rem;
     }
 
     .project-description {
-        font-size: 0.95rem;
+        font-size: 0.9rem;
+        line-height: 1.6;
     }
 
     .tech-tag {
-        font-size: 0.8rem;
-        padding: 0.4rem 1rem;
+        font-size: 0.75rem;
+        padding: 0.35rem 0.8rem;
     }
 
     .contact-info-card {
@@ -1392,6 +1528,25 @@ section {
 
     .footer-content p {
         font-size: 0.9rem;
+    }
+    
+    /* Adjust swipe containers for smaller screens */
+    .mobile-swipe-container {
+        margin: 0 -1rem;
+    }
+    
+    .swipe-wrapper {
+        padding: 0 1rem;
+    }
+    
+    .swipe-item {
+        min-width: calc(100% - 2rem);
+        max-width: calc(100% - 2rem);
+        padding: 0 0.5rem;
+    }
+    
+    .swipe-hint {
+        font-size: 0.8rem;
     }
 }
 
@@ -1428,7 +1583,30 @@ section {
     .skill-column,
     .experience-card,
     .project-card {
-        padding: 1.2rem;
+        padding: 1.2rem 1rem;
+    }
+    
+    .mobile-swipe-container .project-card,
+    .mobile-swipe-container .skill-column,
+    .mobile-swipe-container .contact-info-card {
+        padding: 1.2rem 1rem;
+    }
+    
+    .project-title {
+        font-size: 1.3rem;
+    }
+    
+    .project-description {
+        font-size: 0.85rem;
+    }
+    
+    .tech-tag {
+        font-size: 0.7rem;
+        padding: 0.3rem 0.7rem;
+    }
+    
+    .swipe-hint {
+        font-size: 0.75rem;
     }
 }
 
