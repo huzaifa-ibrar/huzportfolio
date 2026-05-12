@@ -164,7 +164,7 @@ const contactForm = document.getElementById('contact-form');
 
 contactForm?.addEventListener('submit', (e) => {
     e.preventDefault();
-    showToast("Thanks — I'll get back to you within a day.");
+    showToast("Thanks! I'll get back to you within a day.");
     contactForm.reset();
 });
 
