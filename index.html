@@ -3,35 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Huzaifa Ibrar - Full Stack Developer</title>
+    <title>Huzaifa Ibrar — Full Stack Developer · Cloud · DevOps</title>
+    <meta name="description" content="Huzaifa Ibrar — full stack developer, cloud engineer, and product builder. Creator of Crewty and partner to multiple service businesses across Canada.">
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 </head>
 <body>
+    <!-- Grain overlay -->
+    <div class="grain" aria-hidden="true"></div>
+
     <!-- Side Navigation -->
     <nav class="side-nav" id="side-nav">
         <div class="nav-header">
-            <div class="nav-logo">HI</div>
+            <a href="#home" class="nav-logo" aria-label="Home">
+                <span class="logo-mark">HI</span>
+            </a>
         </div>
         <ul class="nav-links">
-            <li><a href="#home" class="nav-link" data-text="Home"><i class="fas fa-home"></i><span>Home</span></a></li>
-            <li><a href="#about" class="nav-link" data-text="About"><i class="fas fa-user"></i><span>About</span></a></li>
-            <li><a href="#experience" class="nav-link" data-text="Experience"><i class="fas fa-briefcase"></i><span>Experience</span></a></li>
-            <li><a href="#projects" class="nav-link" data-text="Projects"><i class="fas fa-code"></i><span>Projects</span></a></li>
-            <li><a href="#contact" class="nav-link" data-text="Contact"><i class="fas fa-envelope"></i><span>Contact</span></a></li>
+            <li><a href="#home" class="nav-link" data-text="Home"><i class="fa-regular fa-circle-dot"></i><span>Home</span></a></li>
+            <li><a href="#about" class="nav-link" data-text="About"><i class="fa-regular fa-user"></i><span>About</span></a></li>
+            <li><a href="#experience" class="nav-link" data-text="Experience"><i class="fa-regular fa-clock"></i><span>Experience</span></a></li>
+            <li><a href="#projects" class="nav-link" data-text="Projects"><i class="fa-regular fa-folder"></i><span>Projects</span></a></li>
+            <li><a href="#contact" class="nav-link" data-text="Contact"><i class="fa-regular fa-envelope"></i><span>Contact</span></a></li>
         </ul>
         <div class="nav-footer">
             <div class="social-nav">
                 <a href="https://github.com/huzaifa-ibrar" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
                 <a href="https://www.linkedin.com/in/huzaifa-ibrar/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                <a href="mailto:huzaifa.57@hotmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+                <a href="mailto:huzaifa.57@hotmail.com" title="Email"><i class="fa-regular fa-envelope"></i></a>
             </div>
         </div>
     </nav>
 
     <!-- Mobile Toggle -->
-    <button class="mobile-toggle" id="mobile-toggle">
+    <button class="mobile-toggle" id="mobile-toggle" aria-label="Open menu">
         <span></span>
         <span></span>
         <span></span>
@@ -39,204 +50,161 @@
 
     <!-- Main Content -->
     <main class="main-content">
+
         <!-- Hero Section -->
         <section id="home" class="hero-section">
-            <div class="hero-container">
+            <div class="hero-grid">
                 <div class="hero-left">
-                    <div class="hero-badges">
-                        <div class="hero-badge">Full Stack Developer</div>
-                        <div class="hero-badge">Cloud Engineer</div>
-                        <div class="hero-badge">DevOps Engineer</div>
+                    <div class="hero-kicker">
+                        <span class="kicker-dot"></span>
+                        <span>Toronto, Canada — available for select work</span>
                     </div>
+
                     <h1 class="hero-title">
-                        <span class="line">Hello,</span>
-                        <span class="line">I'm <span class="highlight">Huzaifa</span></span>
-                        <span class="line">Ibrar</span>
+                        <span class="line">Building products</span>
+                        <span class="line">that real <em>businesses</em></span>
+                        <span class="line">actually run on.</span>
                     </h1>
+
                     <p class="hero-description">
-                        Crafting exceptional digital experiences with modern technologies. 
-                        Specialized in building scalable web applications with a focus on performance and user experience.
+                        I'm <strong>Huzaifa Ibrar</strong> — a full stack developer and cloud engineer. I design, ship, and operate software end-to-end: mobile apps, web platforms, dashboards, and the infrastructure underneath. Some of it lives in app stores, some of it runs entire service companies.
                     </p>
+
+                    <div class="hero-roles">
+                        <span class="role-pill">Full Stack Developer</span>
+                        <span class="role-pill">Cloud Engineer</span>
+                        <span class="role-pill">DevOps</span>
+                        <span class="role-pill">Product Builder</span>
+                    </div>
+
                     <div class="hero-buttons">
                         <a href="#projects" class="btn btn-primary">
-                            <span>View Projects</span>
-                            <i class="fas fa-arrow-right"></i>
+                            <span>See the work</span>
+                            <i class="fa-solid fa-arrow-down-long"></i>
                         </a>
-                        <a href="#contact" class="btn btn-outline">
-                            <span>Get In Touch</span>
-                        </a>
-                    </div>
-                    <div class="hero-social">
-                        <a href="https://github.com/huzaifa-ibrar" target="_blank" class="hero-social-link" title="GitHub">
-                            <i class="fab fa-github"></i>
-                        </a>
-                        <a href="https://www.linkedin.com/in/huzaifa-ibrar/" target="_blank" class="hero-social-link" title="LinkedIn">
-                            <i class="fab fa-linkedin"></i>
+                        <a href="#contact" class="btn btn-ghost">
+                            <span>Get in touch</span>
+                            <i class="fa-regular fa-paper-plane"></i>
                         </a>
                     </div>
-                    <div class="hero-stats">
-                        <div class="stat-item">
-                            <div class="stat-number">4+</div>
-                            <div class="stat-label">Projects</div>
+
+                    <div class="hero-meta">
+                        <div class="meta-item">
+                            <div class="meta-value">30+</div>
+                            <div class="meta-label">Companies using Crewty</div>
                         </div>
-                        <div class="stat-divider"></div>
-                        <div class="stat-item">
-                            <div class="stat-number">2</div>
-                            <div class="stat-label">Internships</div>
+                        <div class="meta-item">
+                            <div class="meta-value">10+</div>
+                            <div class="meta-label">Shipped projects</div>
                         </div>
-                        <div class="stat-divider"></div>
-                        <div class="stat-item">
-                            <div class="stat-number">10+</div>
-                            <div class="stat-label">Technologies</div>
+                        <div class="meta-item">
+                            <div class="meta-value">2</div>
+                            <div class="meta-label">Engineering internships</div>
                         </div>
                     </div>
                 </div>
+
                 <div class="hero-right">
-                    <div class="hero-image-wrapper">
-                        <div class="image-background"></div>
-                        <img src="Me/huzaifa.jpg" alt="Huzaifa Ibrar" class="hero-image">
+                    <div class="portrait">
+                        <div class="portrait-frame">
+                            <img src="Me/huzaifa.jpg" alt="Huzaifa Ibrar" class="portrait-img">
+                            <div class="portrait-tag">
+                                <span class="tag-pulse"></span>
+                                <span>Currently shipping</span>
+                            </div>
+                        </div>
+                        <div class="portrait-card portrait-card--top">
+                            <div class="pc-label">Latest</div>
+                            <div class="pc-title">Crewty AI</div>
+                            <div class="pc-sub">In development</div>
+                        </div>
+                        <div class="portrait-card portrait-card--bottom">
+                            <div class="pc-label">Stack</div>
+                            <div class="pc-chips">
+                                <span>React Native</span>
+                                <span>Node</span>
+                                <span>AWS</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="scroll-indicator">
-                <span>Scroll</span>
-                <div class="scroll-line"></div>
+
+            <div class="hero-marquee" aria-hidden="true">
+                <div class="marquee-track">
+                    <span>Crewty</span><span>·</span>
+                    <span>Festbau</span><span>·</span>
+                    <span>Skycrest Marketing</span><span>·</span>
+                    <span>Novo Home Services</span><span>·</span>
+                    <span>Pristine Clean Services</span><span>·</span>
+                    <span>Novo Cleaning</span><span>·</span>
+                    <span>Pakistan International Airlines</span><span>·</span>
+                    <span>Enmumba</span><span>·</span>
+                    <span>Crewty</span><span>·</span>
+                    <span>Festbau</span><span>·</span>
+                    <span>Skycrest Marketing</span><span>·</span>
+                    <span>Novo Home Services</span><span>·</span>
+                    <span>Pristine Clean Services</span><span>·</span>
+                    <span>Novo Cleaning</span><span>·</span>
+                </div>
             </div>
         </section>
 
         <!-- About Section -->
         <section id="about" class="about-section">
             <div class="section-container">
-                <div class="section-header">
-                    <span class="section-number">01</span>
-                    <h2 class="section-title">About Me</h2>
-                </div>
-                
-                <div class="about-content">
+                <header class="section-header">
+                    <span class="section-index">01 / About</span>
+                    <h2 class="section-title">A developer who actually ships.</h2>
+                </header>
+
+                <div class="about-grid">
                     <div class="about-text">
                         <p class="lead-text">
-                            Hello! I'm a Full Stack Developer with a Bachelor of Science in Computer Programming and Analysis from Seneca College.
+                            I build the stack end-to-end — from the database schema to the iOS binary to the AWS pipeline that pushes it live.
                         </p>
                         <p>
-                            I specialize in turning complex business challenges across the Aviation, Tech, and Industrial sectors into robust, high-performance web applications.
+                            BS in Computer Programming and Analysis from Seneca College. I've worked across aviation (PIA), DevOps (Enmumba), and now run multiple production products of my own — including <strong>Crewty</strong>, a mobile + web platform that 30+ service companies use to operate their businesses.
                         </p>
                         <p>
-                            My development philosophy is rooted in versatility. I architect and implement solutions across the entire stack—from scalable Cloud Services (AWS) and modern DevOps pipelines to designing exceptional Front-End user experiences. I'm a technology enthusiast at heart, constantly exploring the newest tools and leveraging AI to enhance development efficiency.
+                            My approach is unglamorous: pick the right tool, ship the smallest thing that works, then iterate based on what users actually do. I lean into AI where it makes the work faster, but the architecture, the trade-offs, and the decisions are mine.
                         </p>
                         <p>
-                            Beyond code, my drive for learning and creation powers several entrepreneurial side ventures, including Shopify stores and home service companies. When I unplug, you can find me traveling, enjoying the outdoors, or playing competitive sports like soccer, basketball, and hockey. I'm always investing time into learning a new skill, whether it's technical or business-related—because growth never stops!
+                            Outside of code: I run a few side ventures, travel when I can, and play more sports than my schedule should allow — soccer, basketball, hockey. Always learning something.
                         </p>
                     </div>
 
-                    <!-- Desktop Skills Grid -->
-                    <div class="skills-container desktop-only">
-                        <div class="skill-column">
-                            <h3 class="skill-column-title">Languages</h3>
-                            <div class="skill-list">
-                                <div class="skill-item">Java</div>
-                                <div class="skill-item">Python</div>
-                                <div class="skill-item">JavaScript</div>
-                                <div class="skill-item">C</div>
-                                <div class="skill-item">Bash</div>
-                            </div>
+                    <aside class="about-side">
+                        <div class="about-card">
+                            <div class="card-label">Currently</div>
+                            <ul class="about-list">
+                                <li><strong>Crewty</strong> — adding AI that learns each user's business</li>
+                                <li><strong>Festbau.ca</strong> — maintaining + iterating</li>
+                                <li><strong>Skycrest</strong> — client portal v2</li>
+                            </ul>
                         </div>
-                        
-                        <div class="skill-column">
-                            <h3 class="skill-column-title">Frameworks</h3>
-                            <div class="skill-list">
-                                <div class="skill-item">React</div>
-                                <div class="skill-item">Next.js</div>
-                                <div class="skill-item">Express</div>
-                                <div class="skill-item">Bootstrap</div>
-                                <div class="skill-item">JavaFX</div>
-                            </div>
-                        </div>
-                        
-                        <div class="skill-column">
-                            <h3 class="skill-column-title">Databases</h3>
-                            <div class="skill-list">
-                                <div class="skill-item">MongoDB</div>
-                                <div class="skill-item">PostgreSQL</div>
-                                <div class="skill-item">MySQL</div>
-                                <div class="skill-item">OracleDB</div>
-                                <div class="skill-item">DynamoDB</div>
-                            </div>
-                        </div>
-                        
-                        <div class="skill-column">
-                            <h3 class="skill-column-title">DevOps/Cloud</h3>
-                            <div class="skill-list">
-                                <div class="skill-item">AWS</div>
-                                <div class="skill-item">Docker</div>
-                                <div class="skill-item">Kubernetes</div>
-                                <div class="skill-item">Azure</div>
-                                <div class="skill-item">GitHub Actions</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Mobile Swipeable Skills -->
-                    <div class="skills-container mobile-swipe-container">
-                        <div class="swipe-wrapper" id="skills-swipe-wrapper">
-                            <div class="swipe-item">
-                                <div class="skill-column">
-                                    <h3 class="skill-column-title">Languages</h3>
-                                    <div class="skill-list">
-                                        <div class="skill-item">Java</div>
-                                        <div class="skill-item">Python</div>
-                                        <div class="skill-item">JavaScript</div>
-                                        <div class="skill-item">C</div>
-                                        <div class="skill-item">Bash</div>
-                                    </div>
+                        <div class="about-card">
+                            <div class="card-label">Stack I reach for</div>
+                            <div class="stack-grid">
+                                <div class="stack-row">
+                                    <span class="stack-key">Languages</span>
+                                    <span class="stack-val">Java · Python · JavaScript · C · Bash</span>
                                 </div>
-                            </div>
-                            
-                            <div class="swipe-item">
-                                <div class="skill-column">
-                                    <h3 class="skill-column-title">Frameworks</h3>
-                                    <div class="skill-list">
-                                        <div class="skill-item">React</div>
-                                        <div class="skill-item">Next.js</div>
-                                        <div class="skill-item">Express</div>
-                                        <div class="skill-item">Bootstrap</div>
-                                        <div class="skill-item">JavaFX</div>
-                                    </div>
+                                <div class="stack-row">
+                                    <span class="stack-key">Frameworks</span>
+                                    <span class="stack-val">React · React Native · Next.js · Express</span>
                                 </div>
-                            </div>
-                            
-                            <div class="swipe-item">
-                                <div class="skill-column">
-                                    <h3 class="skill-column-title">Databases</h3>
-                                    <div class="skill-list">
-                                        <div class="skill-item">MongoDB</div>
-                                        <div class="skill-item">PostgreSQL</div>
-                                        <div class="skill-item">MySQL</div>
-                                        <div class="skill-item">OracleDB</div>
-                                        <div class="skill-item">DynamoDB</div>
-                                    </div>
+                                <div class="stack-row">
+                                    <span class="stack-key">Databases</span>
+                                    <span class="stack-val">MongoDB · PostgreSQL · MySQL · DynamoDB</span>
                                 </div>
-                            </div>
-                            
-                            <div class="swipe-item">
-                                <div class="skill-column">
-                                    <h3 class="skill-column-title">DevOps/Cloud</h3>
-                                    <div class="skill-list">
-                                        <div class="skill-item">AWS</div>
-                                        <div class="skill-item">Docker</div>
-                                        <div class="skill-item">Kubernetes</div>
-                                        <div class="skill-item">Azure</div>
-                                        <div class="skill-item">GitHub Actions</div>
-                                    </div>
+                                <div class="stack-row">
+                                    <span class="stack-key">Cloud / Ops</span>
+                                    <span class="stack-val">AWS · Docker · Kubernetes · GitHub Actions · Argo CD</span>
                                 </div>
                             </div>
                         </div>
-                        <div class="swipe-indicators" id="skills-indicators"></div>
-                        <div class="swipe-hint">
-                            <i class="fas fa-hand-point-left"></i>
-                            <span>Swipe to see more</span>
-                            <i class="fas fa-hand-point-right"></i>
-                        </div>
-                    </div>
+                    </aside>
                 </div>
             </div>
         </section>
@@ -244,36 +212,40 @@
         <!-- Experience Section -->
         <section id="experience" class="experience-section">
             <div class="section-container">
-                <div class="section-header">
-                    <span class="section-number">02</span>
-                    <h2 class="section-title">Experience</h2>
-                </div>
+                <header class="section-header">
+                    <span class="section-index">02 / Experience</span>
+                    <h2 class="section-title">Where I've shipped.</h2>
+                </header>
 
-                <div class="experience-grid">
-                    <div class="experience-card">
-                        <div class="experience-date">September 2024 - December 2024</div>
-                        <h3 class="experience-title">DevOps Engineer</h3>
-                        <div class="experience-company">Enmumba - Intern</div>
-                        <div class="experience-location">California, USA (Remote)</div>
-                        <ul class="experience-achievements">
-                            <li>Automated application deployments with AWS CodePipeline, reducing manual effort by 40 hours per month and deployment time by 30%</li>
-                            <li>Managed Amazon S3 for secure data storage, improving data retrieval speeds and reducing storage costs by $2,000 annually</li>
-                            <li>Deployed and managed containerized applications using Docker, ensuring 100% environmental consistency</li>
-                            <li>Streamlined CI/CD pipelines, cutting build times from 45 minutes to 25 minutes</li>
-                        </ul>
-                    </div>
+                <div class="timeline">
+                    <article class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-date">Sep 2024 — Dec 2024</div>
+                        <div class="timeline-body">
+                            <h3 class="timeline-role">DevOps Engineer</h3>
+                            <div class="timeline-org">Enmumba · Intern · California, USA (Remote)</div>
+                            <ul class="timeline-achievements">
+                                <li>Automated app deployments with AWS CodePipeline — cut manual effort by ~40 hours/month and deployment time by 30%.</li>
+                                <li>Managed Amazon S3 for secure storage; improved retrieval speed and reduced storage cost by ~$2,000/yr.</li>
+                                <li>Deployed and operated containerized apps with Docker for full environmental consistency.</li>
+                                <li>Streamlined CI/CD pipelines from 45-minute builds down to 25 minutes.</li>
+                            </ul>
+                        </div>
+                    </article>
 
-                    <div class="experience-card">
-                        <div class="experience-date">May 2024 - August 2024</div>
-                        <h3 class="experience-title">Software Developer</h3>
-                        <div class="experience-company">Pakistan International Airlines - Intern</div>
-                        <div class="experience-location">Islamabad, Pakistan</div>
-                        <ul class="experience-achievements">
-                            <li>Improved the PIA website's UI/UX, leading to a 30% increase in mobile traffic and reducing bounce rates by 15%</li>
-                            <li>Designed and implemented routing APIs, cutting front-end and back-end data exchange time by 25%</li>
-                            <li>Developed a secure passenger ticketing system, processing 1,000+ bookings per week with 15% fewer errors</li>
-                        </ul>
-                    </div>
+                    <article class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-date">May 2024 — Aug 2024</div>
+                        <div class="timeline-body">
+                            <h3 class="timeline-role">Software Developer</h3>
+                            <div class="timeline-org">Pakistan International Airlines · Intern · Islamabad, Pakistan</div>
+                            <ul class="timeline-achievements">
+                                <li>Reworked PIA's website UI/UX — 30% increase in mobile traffic, 15% bounce reduction.</li>
+                                <li>Designed routing APIs that cut front/back-end exchange time by 25%.</li>
+                                <li>Built a secure passenger ticketing system processing 1,000+ bookings/week with 15% fewer errors.</li>
+                            </ul>
+                        </div>
+                    </article>
                 </div>
             </div>
         </section>
@@ -281,144 +253,274 @@
         <!-- Projects Section -->
         <section id="projects" class="projects-section">
             <div class="section-container">
-                <div class="section-header">
-                    <span class="section-number">03</span>
-                    <h2 class="section-title">Featured Projects</h2>
-                </div>
+                <header class="section-header">
+                    <span class="section-index">03 / Selected Work</span>
+                    <h2 class="section-title">Products & platforms I've built.</h2>
+                    <p class="section-subtitle">A mix of my own products and commissioned work. Click any card for details.</p>
+                </header>
 
-                <!-- Desktop Projects Grid -->
-                <div class="projects-grid desktop-only">
-                    <div class="project-card featured">
-                        <div class="project-label">Featured Project</div>
-                        <h3 class="project-title">Fragment Storage Microservice</h3>
-                        <div class="project-description">
-                            Designed and deployed a scalable microservice for managing diverse data fragments (text, image, JSON) on AWS ECS, utilizing S3 for storage and DynamoDB for metadata. Implemented end-to-end CI/CD with GitHub Actions to automate container builds and deployment. Engineered on-the-fly content conversion capabilities and developed a full-stack front-end client for user fragment creation, manipulation, and authentication.
-                        </div>
-                        <div class="project-tech">
-                            <span class="tech-tag">Node.js</span>
-                            <span class="tech-tag">Express</span>
-                            <span class="tech-tag">Docker</span>
-                            <span class="tech-tag">AWS ECS</span>
-                            <span class="tech-tag">S3</span>
-                            <span class="tech-tag">DynamoDB</span>
-                            <span class="tech-tag">Cognito</span>
-                        </div>
-                    </div>
-
-                    <div class="project-card">
-                        <h3 class="project-title">Car Loan System</h3>
-                        <div class="project-description">
-                            Built a JavaFX application with MongoDB for secure user authentication and data storage. Developed features for loan exploration, inputting details, and tracking loan history. Designed a database schema to manage vehicles, user records, and financial data.
-                        </div>
-                        <div class="project-tech">
-                            <span class="tech-tag">JavaFX</span>
-                            <span class="tech-tag">Maven</span>
-                            <span class="tech-tag">MongoDB</span>
-                        </div>
-                    </div>
-
-                    <div class="project-card">
-                        <h3 class="project-title">Kubernetes GitOps Pipeline</h3>
-                        <div class="project-description">
-                            Built a GitOps-based CI/CD pipeline with Argo CD, Rollouts, and Workflows for automated Kubernetes deployments. Implemented Canary and Blue-Green deployments with auto rollbacks triggered by Git commits and Docker updates.
-                        </div>
-                        <div class="project-tech">
-                            <span class="tech-tag">Argo CD</span>
-                            <span class="tech-tag">Kubernetes</span>
-                            <span class="tech-tag">Docker</span>
-                            <span class="tech-tag">GitOps</span>
-                        </div>
-                    </div>
-
-                    <div class="project-card">
-                        <h3 class="project-title">Library Management System</h3>
-                        <div class="project-description">
-                            Developed a full-stack web application using JavaScript, MongoDB, HTML/CSS, and additional frameworks. Implemented role-based authentication, providing administrators, staff, and regular users with tailored access and menus.
-                        </div>
-                        <div class="project-tech">
-                            <span class="tech-tag">JavaScript</span>
-                            <span class="tech-tag">MongoDB</span>
-                            <span class="tech-tag">HTML/CSS</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Mobile Swipeable Projects -->
-                <div class="projects-grid mobile-swipe-container">
-                    <div class="swipe-wrapper" id="projects-swipe-wrapper">
-                        <div class="swipe-item">
-                            <div class="project-card featured">
-                                <div class="project-label">Featured Project</div>
-                                <h3 class="project-title">Fragment Storage Microservice</h3>
-                                <div class="project-description">
-                                    Designed and deployed a scalable microservice for managing diverse data fragments (text, image, JSON) on AWS ECS, utilizing S3 for storage and DynamoDB for metadata. Implemented end-to-end CI/CD with GitHub Actions to automate container builds and deployment.
+                <div class="projects-bento">
+                    <!-- CREWTY — flagship -->
+                    <article class="bento bento--flagship" data-project="crewty">
+                        <div class="flagship-visual">
+                            <div class="phone-mock">
+                                <div class="phone-notch"></div>
+                                <div class="phone-screen">
+                                    <div class="ps-header">
+                                        <span class="ps-time">9:41</span>
+                                        <span class="ps-icons"><i class="fa-solid fa-signal"></i> <i class="fa-solid fa-wifi"></i> <i class="fa-solid fa-battery-full"></i></span>
+                                    </div>
+                                    <div class="ps-title">Today</div>
+                                    <div class="ps-sub">Wednesday, May 14</div>
+                                    <div class="ps-stat">
+                                        <div class="ps-stat-num">12</div>
+                                        <div class="ps-stat-lbl">jobs scheduled</div>
+                                    </div>
+                                    <div class="ps-jobs">
+                                        <div class="ps-job"><span class="ps-dot ps-dot--ok"></span> 9:00 — Carpet · 142 King St</div>
+                                        <div class="ps-job"><span class="ps-dot ps-dot--ok"></span> 11:30 — Deep clean · Bay Cres.</div>
+                                        <div class="ps-job"><span class="ps-dot ps-dot--pend"></span> 2:00 — Move-out · 88 Front</div>
+                                        <div class="ps-job"><span class="ps-dot ps-dot--ok"></span> 4:30 — Quote · Spadina Ave</div>
+                                    </div>
+                                    <div class="ps-cta">+ New booking</div>
                                 </div>
-                                <div class="project-tech">
-                                    <span class="tech-tag">Node.js</span>
-                                    <span class="tech-tag">Express</span>
-                                    <span class="tech-tag">Docker</span>
-                                    <span class="tech-tag">AWS ECS</span>
-                                    <span class="tech-tag">S3</span>
-                                    <span class="tech-tag">DynamoDB</span>
+                            </div>
+                            <div class="browser-mock">
+                                <div class="bm-bar">
+                                    <span class="bm-dot"></span><span class="bm-dot"></span><span class="bm-dot"></span>
+                                    <span class="bm-url">app.crewty.com</span>
+                                </div>
+                                <div class="bm-body">
+                                    <div class="bm-side">
+                                        <div class="bm-side-item bm-active">Dashboard</div>
+                                        <div class="bm-side-item">Clients</div>
+                                        <div class="bm-side-item">Bookings</div>
+                                        <div class="bm-side-item">Leads</div>
+                                        <div class="bm-side-item">Staff</div>
+                                        <div class="bm-side-item">Invoicing</div>
+                                    </div>
+                                    <div class="bm-content">
+                                        <div class="bm-tile bm-tile--lg"></div>
+                                        <div class="bm-tile"></div>
+                                        <div class="bm-tile"></div>
+                                        <div class="bm-tile bm-tile--row"></div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
+                        <div class="flagship-text">
+                            <div class="bento-label">
+                                <span class="label-dot"></span>
+                                Flagship · In production
+                            </div>
+                            <h3 class="bento-title">Crewty</h3>
+                            <div class="bento-tagline">The operating system for service businesses.</div>
+                            <p class="bento-desc">
+                                A mobile + web platform that 30+ service companies use to run their entire operation — bookings, clients, staff, invoicing, and lead capture, synced in real time across iOS and the web dashboard. Built solo from the ground up, with security in from day one.
+                            </p>
+                            <div class="bento-highlights">
+                                <div class="hl-item"><i class="fa-solid fa-mobile-screen"></i> iOS app (App Store) + full web dashboard</div>
+                                <div class="hl-item"><i class="fa-brands fa-facebook"></i> Facebook Lead Ads → app, automatically</div>
+                                <div class="hl-item"><i class="fa-solid fa-plug"></i> Webhooks + embeddable booking forms</div>
+                                <div class="hl-item"><i class="fa-solid fa-dollar-sign"></i> $29.99 / $49.99 monthly tiers</div>
+                                <div class="hl-item"><i class="fa-solid fa-brain"></i> AI assistant that learns each business <span class="hl-badge">building now</span></div>
+                            </div>
+                            <div class="bento-tech">
+                                <span class="tech-chip">React Native</span>
+                                <span class="tech-chip">Node.js</span>
+                                <span class="tech-chip">PostgreSQL</span>
+                                <span class="tech-chip">AWS</span>
+                                <span class="tech-chip">Stripe</span>
+                                <span class="tech-chip">Meta API</span>
+                            </div>
+                            <button class="bento-cta" data-open="crewty">
+                                <span>Read the case study</span>
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </article>
 
-                        <div class="swipe-item">
-                            <div class="project-card">
-                                <h3 class="project-title">Car Loan System</h3>
-                                <div class="project-description">
-                                    Built a JavaFX application with MongoDB for secure user authentication and data storage. Developed features for loan exploration, inputting details, and tracking loan history. Designed a database schema to manage vehicles, user records, and financial data.
-                                </div>
-                                <div class="project-tech">
-                                    <span class="tech-tag">JavaFX</span>
-                                    <span class="tech-tag">Maven</span>
-                                    <span class="tech-tag">MongoDB</span>
-                                </div>
+                    <!-- FESTBAU -->
+                    <article class="bento bento--media" data-project="festbau">
+                        <div class="bento-media">
+                            <img loading="lazy" src="https://image.thum.io/get/width/1200/crop/750/https://festbau.ca" alt="Festbau.ca preview" class="bento-shot" onerror="this.classList.add('failed')">
+                            <div class="bento-media-fallback">
+                                <div class="bmf-logo">FESTBAU</div>
+                                <div class="bmf-sub">Construction Co.</div>
+                            </div>
+                            <a href="https://festbau.ca" target="_blank" class="bento-visit" aria-label="Visit festbau.ca">
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            </a>
+                        </div>
+                        <div class="bento-body">
+                            <div class="bento-label">Commissioned · Construction</div>
+                            <h3 class="bento-title-sm">Festbau</h3>
+                            <p class="bento-desc-sm">
+                                Full website design and build for a multi-million-dollar construction company. Showcases past projects, services, and a clean lead-capture flow built around their executive brand.
+                            </p>
+                            <div class="bento-tech">
+                                <span class="tech-chip">HTML</span>
+                                <span class="tech-chip">JavaScript</span>
+                                <span class="tech-chip">CSS</span>
+                                <span class="tech-chip">GSAP</span>
+                            </div>
+                            <button class="bento-cta-sm" data-open="festbau">
+                                <span>Details</span> <i class="fa-solid fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </article>
+
+                    <!-- SKYCREST MARKETING -->
+                    <article class="bento bento--media" data-project="skycrest">
+                        <div class="bento-media">
+                            <img loading="lazy" src="https://image.thum.io/get/width/1200/crop/750/https://skycrestmarketing.net" alt="Skycrest Marketing preview" class="bento-shot" onerror="this.classList.add('failed')">
+                            <div class="bento-media-fallback">
+                                <div class="bmf-logo">SKYCREST</div>
+                                <div class="bmf-sub">Agency Portal</div>
+                            </div>
+                            <a href="https://skycrestmarketing.net/" target="_blank" class="bento-visit" aria-label="Visit Skycrest Marketing">
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            </a>
+                        </div>
+                        <div class="bento-body">
+                            <div class="bento-label">Webapp · Agency tools</div>
+                            <h3 class="bento-title-sm">Skycrest Marketing</h3>
+                            <p class="bento-desc-sm">
+                                Full client management dashboard for a marketing agency — onboarding, client comms, subscription billing, and role-based access. Built around how their team actually works.
+                            </p>
+                            <div class="bento-tech">
+                                <span class="tech-chip">Next.js</span>
+                                <span class="tech-chip">Stripe</span>
+                                <span class="tech-chip">Auth</span>
+                                <span class="tech-chip">PostgreSQL</span>
+                            </div>
+                            <button class="bento-cta-sm" data-open="skycrest">
+                                <span>Details</span> <i class="fa-solid fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </article>
+
+                    <!-- PRISTINE CLEAN -->
+                    <article class="bento bento--small" data-project="pristine">
+                        <div class="bento-media bento-media--sm">
+                            <img loading="lazy" src="https://image.thum.io/get/width/900/crop/600/https://pristinecleanservices.ca" alt="Pristine Clean Services preview" class="bento-shot" onerror="this.classList.add('failed')">
+                            <div class="bento-media-fallback">
+                                <div class="bmf-logo">PRISTINE</div>
+                                <div class="bmf-sub">Clean Services</div>
                             </div>
                         </div>
+                        <div class="bento-body bento-body--sm">
+                            <div class="bento-label">Commissioned site</div>
+                            <h3 class="bento-title-xs">Pristine Clean Services</h3>
+                            <p class="bento-desc-xs">Service business site with booking flow and content management.</p>
+                            <a href="https://pristinecleanservices.ca" target="_blank" class="bento-link">pristinecleanservices.ca <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        </div>
+                    </article>
 
-                        <div class="swipe-item">
-                            <div class="project-card">
-                                <h3 class="project-title">Kubernetes GitOps Pipeline</h3>
-                                <div class="project-description">
-                                    Built a GitOps-based CI/CD pipeline with Argo CD, Rollouts, and Workflows for automated Kubernetes deployments. Implemented Canary and Blue-Green deployments with auto rollbacks triggered by Git commits and Docker updates.
-                                </div>
-                                <div class="project-tech">
-                                    <span class="tech-tag">Argo CD</span>
-                                    <span class="tech-tag">Kubernetes</span>
-                                    <span class="tech-tag">Docker</span>
-                                    <span class="tech-tag">GitOps</span>
-                                </div>
+                    <!-- NOVO CLEANING -->
+                    <article class="bento bento--small" data-project="novoclean">
+                        <div class="bento-media bento-media--sm">
+                            <img loading="lazy" src="https://image.thum.io/get/width/900/crop/600/https://www.novocleaningservices.com" alt="Novo Cleaning Services preview" class="bento-shot" onerror="this.classList.add('failed')">
+                            <div class="bento-media-fallback">
+                                <div class="bmf-logo">NOVO</div>
+                                <div class="bmf-sub">Cleaning Services</div>
                             </div>
                         </div>
+                        <div class="bento-body bento-body--sm">
+                            <div class="bento-label">Commissioned site</div>
+                            <h3 class="bento-title-xs">Novo Cleaning Services</h3>
+                            <p class="bento-desc-xs">Marketing site with quote requests and service catalog.</p>
+                            <a href="https://www.novocleaningservices.com/" target="_blank" class="bento-link">novocleaningservices.com <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        </div>
+                    </article>
 
-                        <div class="swipe-item">
-                            <div class="project-card">
-                                <h3 class="project-title">Library Management System</h3>
-                                <div class="project-description">
-                                    Developed a full-stack web application using JavaScript, MongoDB, HTML/CSS, and additional frameworks. Implemented role-based authentication, providing administrators, staff, and regular users with tailored access and menus.
-                                </div>
-                                <div class="project-tech">
-                                    <span class="tech-tag">JavaScript</span>
-                                    <span class="tech-tag">MongoDB</span>
-                                    <span class="tech-tag">HTML/CSS</span>
-                                </div>
+                    <!-- NOVO HOME -->
+                    <article class="bento bento--small" data-project="novohome">
+                        <div class="bento-media bento-media--sm">
+                            <img loading="lazy" src="https://image.thum.io/get/width/900/crop/600/https://novo-home-services.vercel.app" alt="Novo Home Services preview" class="bento-shot" onerror="this.classList.add('failed')">
+                            <div class="bento-media-fallback">
+                                <div class="bmf-logo">NOVO HOME</div>
+                                <div class="bmf-sub">Home Services</div>
                             </div>
                         </div>
-                    </div>
-                    <div class="swipe-indicators" id="projects-indicators"></div>
-                    <div class="swipe-hint">
-                        <i class="fas fa-hand-point-left"></i>
-                        <span>Swipe to see more projects</span>
-                        <i class="fas fa-hand-point-right"></i>
-                    </div>
+                        <div class="bento-body bento-body--sm">
+                            <div class="bento-label">Commissioned site</div>
+                            <h3 class="bento-title-xs">Novo Home Services</h3>
+                            <p class="bento-desc-xs">Sister-brand marketing site, deployed on Vercel.</p>
+                            <a href="https://vercel.com/skycrestsites-projects/novo-home-services" target="_blank" class="bento-link">View on Vercel <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        </div>
+                    </article>
+
+                    <!-- FRAGMENT STORAGE -->
+                    <article class="bento bento--code" data-project="fragments">
+                        <div class="bento-body">
+                            <div class="bento-label">Cloud · Microservice</div>
+                            <h3 class="bento-title-sm">Fragment Storage Microservice</h3>
+                            <p class="bento-desc-sm">
+                                Scalable microservice for managing diverse data fragments (text, image, JSON) on AWS ECS, with S3 storage and DynamoDB metadata. End-to-end CI/CD via GitHub Actions, on-the-fly content conversion, and a full front-end client.
+                            </p>
+                            <div class="bento-tech">
+                                <span class="tech-chip">Node.js</span>
+                                <span class="tech-chip">Express</span>
+                                <span class="tech-chip">Docker</span>
+                                <span class="tech-chip">AWS ECS</span>
+                                <span class="tech-chip">S3</span>
+                                <span class="tech-chip">DynamoDB</span>
+                                <span class="tech-chip">Cognito</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- KUBERNETES GITOPS -->
+                    <article class="bento bento--code" data-project="k8s">
+                        <div class="bento-body">
+                            <div class="bento-label">DevOps · GitOps</div>
+                            <h3 class="bento-title-sm">Kubernetes GitOps Pipeline</h3>
+                            <p class="bento-desc-sm">
+                                GitOps-based CI/CD pipeline with Argo CD, Rollouts, and Workflows for automated Kubernetes deployments. Canary and Blue-Green strategies with auto rollbacks triggered by Git commits and Docker updates.
+                            </p>
+                            <div class="bento-tech">
+                                <span class="tech-chip">Argo CD</span>
+                                <span class="tech-chip">Kubernetes</span>
+                                <span class="tech-chip">Docker</span>
+                                <span class="tech-chip">GitOps</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- CAR LOAN -->
+                    <article class="bento bento--code bento--xs" data-project="carloan">
+                        <div class="bento-body">
+                            <div class="bento-label">Desktop · Java</div>
+                            <h3 class="bento-title-xs">Car Loan System</h3>
+                            <p class="bento-desc-xs">JavaFX app with MongoDB for secure auth and loan tracking. Schema design covering vehicles, users, and financial records.</p>
+                            <div class="bento-tech">
+                                <span class="tech-chip">JavaFX</span>
+                                <span class="tech-chip">Maven</span>
+                                <span class="tech-chip">MongoDB</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- LIBRARY MGMT -->
+                    <article class="bento bento--code bento--xs" data-project="library">
+                        <div class="bento-body">
+                            <div class="bento-label">Web · Full-stack</div>
+                            <h3 class="bento-title-xs">Library Management System</h3>
+                            <p class="bento-desc-xs">Full-stack web app with role-based auth — admins, staff, and users each get tailored access and menus.</p>
+                            <div class="bento-tech">
+                                <span class="tech-chip">JavaScript</span>
+                                <span class="tech-chip">MongoDB</span>
+                                <span class="tech-chip">HTML/CSS</span>
+                            </div>
+                        </div>
+                    </article>
                 </div>
 
                 <div class="projects-footer">
-                    <a href="https://github.com/huzaifa-ibrar" target="_blank" class="btn btn-outline">
+                    <a href="https://github.com/huzaifa-ibrar" target="_blank" class="btn btn-ghost">
                         <i class="fab fa-github"></i>
-                        <span>View More on GitHub</span>
+                        <span>More on GitHub</span>
                     </a>
                 </div>
             </div>
@@ -427,146 +529,309 @@
         <!-- Contact Section -->
         <section id="contact" class="contact-section">
             <div class="section-container">
-                <div class="section-header">
-                    <span class="section-number">04</span>
-                    <h2 class="section-title">Get In Touch</h2>
-                </div>
+                <header class="section-header">
+                    <span class="section-index">04 / Contact</span>
+                    <h2 class="section-title">Let's build something.</h2>
+                    <p class="section-subtitle">Open to product work, contracts, and full-time roles. I respond to most messages within a day.</p>
+                </header>
 
-                <div class="contact-content">
-                    <!-- Desktop Contact Info Grid -->
-                    <div class="contact-info-grid desktop-only">
-                        <div class="contact-info-card">
-                            <div class="contact-icon">
-                                <i class="fas fa-envelope"></i>
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <a href="mailto:huzaifa.57@hotmail.com" class="contact-row">
+                            <div class="contact-row-icon"><i class="fa-regular fa-envelope"></i></div>
+                            <div class="contact-row-body">
+                                <div class="cr-label">Email</div>
+                                <div class="cr-value">huzaifa.57@hotmail.com</div>
                             </div>
-                            <h3>Email</h3>
-                            <a href="mailto:huzaifa.57@hotmail.com">huzaifa.57@hotmail.com</a>
+                            <i class="fa-solid fa-arrow-up-right-from-square cr-arrow"></i>
+                        </a>
+                        <a href="tel:+16475724056" class="contact-row">
+                            <div class="contact-row-icon"><i class="fa-solid fa-phone"></i></div>
+                            <div class="contact-row-body">
+                                <div class="cr-label">Phone</div>
+                                <div class="cr-value">(+1) 647-572-4056</div>
+                            </div>
+                            <i class="fa-solid fa-arrow-up-right-from-square cr-arrow"></i>
+                        </a>
+                        <div class="contact-row contact-row--static">
+                            <div class="contact-row-icon"><i class="fa-solid fa-location-dot"></i></div>
+                            <div class="contact-row-body">
+                                <div class="cr-label">Location</div>
+                                <div class="cr-value">Toronto, Canada</div>
+                            </div>
                         </div>
-                        
-                        <div class="contact-info-card">
-                            <div class="contact-icon">
-                                <i class="fas fa-phone"></i>
-                            </div>
-                            <h3>Phone</h3>
-                            <a href="tel:+16475724056">(+1) 647-572-4056</a>
-                        </div>
-                        
-                        <div class="contact-info-card">
-                            <div class="contact-icon">
-                                <i class="fas fa-map-marker-alt"></i>
-                            </div>
-                            <h3>Location</h3>
-                            <p>Toronto, Canada</p>
-                        </div>
-                        
-                        <div class="contact-info-card">
-                            <div class="contact-icon">
-                                <i class="fas fa-share-alt"></i>
-                            </div>
-                            <h3>Connect</h3>
-                            <div class="contact-social">
-                                <a href="https://github.com/huzaifa-ibrar" target="_blank"><i class="fab fa-github"></i></a>
-                                <a href="https://www.linkedin.com/in/huzaifa-ibrar/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <div class="contact-row contact-row--static">
+                            <div class="contact-row-icon"><i class="fa-solid fa-share-nodes"></i></div>
+                            <div class="contact-row-body">
+                                <div class="cr-label">Elsewhere</div>
+                                <div class="contact-social">
+                                    <a href="https://github.com/huzaifa-ibrar" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                                    <a href="https://www.linkedin.com/in/huzaifa-ibrar/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                                </div>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Mobile Swipeable Contact Info -->
-                    <div class="contact-info-grid mobile-swipe-container">
-                        <div class="swipe-wrapper" id="contact-swipe-wrapper">
-                            <div class="swipe-item">
-                                <div class="contact-info-card">
-                                    <div class="contact-icon">
-                                        <i class="fas fa-envelope"></i>
-                                    </div>
-                                    <h3>Email</h3>
-                                    <a href="mailto:huzaifa.57@hotmail.com">huzaifa.57@hotmail.com</a>
-                                </div>
-                            </div>
-                            
-                            <div class="swipe-item">
-                                <div class="contact-info-card">
-                                    <div class="contact-icon">
-                                        <i class="fas fa-phone"></i>
-                                    </div>
-                                    <h3>Phone</h3>
-                                    <a href="tel:+16475724056">(+1) 647-572-4056</a>
-                                </div>
-                            </div>
-                            
-                            <div class="swipe-item">
-                                <div class="contact-info-card">
-                                    <div class="contact-icon">
-                                        <i class="fas fa-map-marker-alt"></i>
-                                    </div>
-                                    <h3>Location</h3>
-                                    <p>Toronto, Canada</p>
-                                </div>
-                            </div>
-                            
-                            <div class="swipe-item">
-                                <div class="contact-info-card">
-                                    <div class="contact-icon">
-                                        <i class="fas fa-share-alt"></i>
-                                    </div>
-                                    <h3>Connect</h3>
-                                    <div class="contact-social">
-                                        <a href="https://github.com/huzaifa-ibrar" target="_blank"><i class="fab fa-github"></i></a>
-                                        <a href="https://www.linkedin.com/in/huzaifa-ibrar/" target="_blank"><i class="fab fa-linkedin"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swipe-indicators" id="contact-indicators"></div>
-                        <div class="swipe-hint">
-                            <i class="fas fa-hand-point-left"></i>
-                            <span>Swipe for contact options</span>
-                            <i class="fas fa-hand-point-right"></i>
-                        </div>
-                    </div>
-
-                    <div class="contact-form-container">
-                        <form class="contact-form" id="contact-form">
-                            <div class="form-row">
-                                <div class="form-group">
-                                    <label for="name">Name</label>
-                                    <input type="text" id="name" name="name" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="email">Email</label>
-                                    <input type="email" id="email" name="email" required>
-                                </div>
+                    <form class="contact-form" id="contact-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" id="name" name="name" required autocomplete="name">
                             </div>
                             <div class="form-group">
-                                <label for="subject">Subject</label>
-                                <input type="text" id="subject" name="subject" required>
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" required autocomplete="email">
                             </div>
-                            <div class="form-group">
-                                <label for="message">Message</label>
-                                <textarea id="message" name="message" rows="6" required></textarea>
-                            </div>
-                            <button type="submit" class="btn btn-primary btn-block">
-                                <span>Send Message</span>
-                                <i class="fas fa-paper-plane"></i>
-                            </button>
-                        </form>
-                    </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="6" required placeholder="What are you building?"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">
+                            <span>Send message</span>
+                            <i class="fa-regular fa-paper-plane"></i>
+                        </button>
+                    </form>
                 </div>
             </div>
         </section>
 
         <!-- Footer -->
         <footer class="footer">
-            <div class="footer-content">
-                <p>&copy; 2025 Huzaifa Ibrar. All rights reserved.</p>
-            
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="footer-logo">HI</div>
+                    <p>Huzaifa Ibrar · Full Stack Developer · Toronto, Canada</p>
+                </div>
+                <div class="footer-meta">
+                    <span>&copy; 2025 — All rights reserved</span>
+                    <span class="footer-dot">·</span>
+                    <a href="#home">Back to top <i class="fa-solid fa-arrow-up"></i></a>
+                </div>
             </div>
         </footer>
     </main>
 
-    <!-- Cursor Trail Canvas -->
-    <canvas id="cursor-trail"></canvas>
-    
+    <!-- Project Modal -->
+    <div class="modal" id="project-modal" aria-hidden="true">
+        <div class="modal-backdrop" data-close></div>
+        <div class="modal-panel" role="dialog" aria-modal="true">
+            <header class="modal-header">
+                <button class="modal-close" data-close aria-label="Close">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </header>
+            <div class="modal-scroll">
+                <div class="modal-content" id="modal-content"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Project Modal Templates -->
+    <template id="tpl-crewty">
+        <div class="md-hero">
+            <div class="md-label"><span class="label-dot"></span> Flagship · In production · 30+ active companies</div>
+            <h2 class="md-title">Crewty</h2>
+            <p class="md-tag">The operating system for service businesses.</p>
+        </div>
+        <div class="md-body">
+            <p>Crewty is a complete mobile + web platform that service companies — cleaning, home services, contractors, trades — use to run their entire operation in one place. iOS native app on the App Store plus a full web dashboard, with everything synced in real time.</p>
+            <p>I built it solo from scratch, including the security model. Most competitors in this space are web-only; Crewty is one of the few with a native mobile experience that staff actually use in the field.</p>
+
+            <h3 class="md-sub">Built into the product</h3>
+            <ul class="md-list">
+                <li><strong>Bookings & calendar</strong> — clients book, staff get assigned, calendars sync</li>
+                <li><strong>Client CRM</strong> — full history, notes, jobs, communications per client</li>
+                <li><strong>Staff management</strong> — schedules, roles, dispatch</li>
+                <li><strong>Invoicing & payments</strong> — generated invoices, online pay, follow-ups</li>
+                <li><strong>Embedded forms</strong> — drop a Crewty booking form into any website</li>
+                <li><strong>Webhooks</strong> — wire Crewty into anything (Zapier, custom integrations)</li>
+                <li><strong>Facebook lead integration</strong> — leads from Meta Lead Ads flow straight into the lead manager, no copy-pasting</li>
+            </ul>
+
+            <h3 class="md-sub">Pricing & business</h3>
+            <p>Two-tier monthly subscription — <strong>$29.99</strong> and <strong>$49.99</strong>. Currently used by 30+ companies in production.</p>
+
+            <h3 class="md-sub">What I'm building right now</h3>
+            <p>An AI assistant that learns each user's business — services, pricing, common questions, client patterns — and helps the owner respond to leads, schedule, and follow up automatically. The base AI is already working; current work is on per-business fine-tuning and the UX around it.</p>
+
+            <h3 class="md-sub">Stack</h3>
+            <div class="md-chips">
+                <span class="tech-chip">React Native</span>
+                <span class="tech-chip">iOS</span>
+                <span class="tech-chip">HTML / JS</span>
+                <span class="tech-chip">Node.js</span>
+                <span class="tech-chip">PostgreSQL</span>
+                <span class="tech-chip">AWS</span>
+                <span class="tech-chip">Stripe</span>
+                <span class="tech-chip">Meta Marketing API</span>
+                <span class="tech-chip">JWT / OAuth</span>
+            </div>
+        </div>
+    </template>
+
+    <template id="tpl-festbau">
+        <div class="md-hero">
+            <div class="md-label">Commissioned · Construction</div>
+            <h2 class="md-title">Festbau</h2>
+            <p class="md-tag">Website for a multi-million-dollar construction company.</p>
+        </div>
+        <div class="md-body">
+            <p>Festbau is a Canadian construction company doing millions in annual revenue. They needed a website that reflected the scale of the work and felt as polished as the projects they deliver.</p>
+            <p>I designed and built the full site from scratch — services pages, project showcases, and a lead-capture flow tuned for their high-value enquiries. Heavy on typography and quiet motion, since that fits the executive brand much better than the usual loud "construction landing page" template.</p>
+            <h3 class="md-sub">Live at</h3>
+            <a href="https://festbau.ca" target="_blank" class="md-link">festbau.ca <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            <h3 class="md-sub">Stack</h3>
+            <div class="md-chips">
+                <span class="tech-chip">HTML</span>
+                <span class="tech-chip">CSS</span>
+                <span class="tech-chip">JavaScript</span>
+                <span class="tech-chip">GSAP</span>
+            </div>
+        </div>
+    </template>
+
+    <template id="tpl-skycrest">
+        <div class="md-hero">
+            <div class="md-label">Webapp · Agency tools</div>
+            <h2 class="md-title">Skycrest Marketing</h2>
+            <p class="md-tag">Client portal & subscription dashboard for a marketing agency.</p>
+        </div>
+        <div class="md-body">
+            <p>Skycrest is a marketing agency that needed to stop running their entire client operation through spreadsheets and DMs. I built them a full webapp where their team manages clients, runs onboarding, communicates, and collects recurring payments — all in one place.</p>
+            <h3 class="md-sub">Inside the app</h3>
+            <ul class="md-list">
+                <li>Per-client workspaces with onboarding flows</li>
+                <li>Two-way client communication</li>
+                <li>Subscription billing (Stripe) with auto-renewals</li>
+                <li>Role-based access for agency staff and clients</li>
+                <li>Security: auth, encrypted credentials, audit trail</li>
+            </ul>
+            <h3 class="md-sub">Live at</h3>
+            <a href="https://skycrestmarketing.net/" target="_blank" class="md-link">skycrestmarketing.net <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            <h3 class="md-sub">Stack</h3>
+            <div class="md-chips">
+                <span class="tech-chip">Next.js</span>
+                <span class="tech-chip">Node.js</span>
+                <span class="tech-chip">PostgreSQL</span>
+                <span class="tech-chip">Stripe</span>
+                <span class="tech-chip">Auth</span>
+                <span class="tech-chip">Vercel</span>
+            </div>
+        </div>
+    </template>
+
+    <template id="tpl-pristine">
+        <div class="md-hero">
+            <div class="md-label">Commissioned site</div>
+            <h2 class="md-title">Pristine Clean Services</h2>
+            <p class="md-tag">Marketing site for a residential & commercial cleaning company.</p>
+        </div>
+        <div class="md-body">
+            <p>Designed and built the full marketing site — service pages, booking flow, and quote requests — for a Canadian cleaning company.</p>
+            <a href="https://pristinecleanservices.ca" target="_blank" class="md-link">pristinecleanservices.ca <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+        </div>
+    </template>
+
+    <template id="tpl-novoclean">
+        <div class="md-hero">
+            <div class="md-label">Commissioned site</div>
+            <h2 class="md-title">Novo Cleaning Services</h2>
+            <p class="md-tag">Service business site with booking and content management.</p>
+        </div>
+        <div class="md-body">
+            <p>Full marketing site for Novo Cleaning Services — services catalog, quote requests, contact, and SEO setup.</p>
+            <a href="https://www.novocleaningservices.com/" target="_blank" class="md-link">novocleaningservices.com <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+        </div>
+    </template>
+
+    <template id="tpl-novohome">
+        <div class="md-hero">
+            <div class="md-label">Commissioned site</div>
+            <h2 class="md-title">Novo Home Services</h2>
+            <p class="md-tag">Sister-brand site for home services, deployed on Vercel.</p>
+        </div>
+        <div class="md-body">
+            <p>Companion site to Novo Cleaning, focused on broader home services.</p>
+            <a href="https://vercel.com/skycrestsites-projects/novo-home-services" target="_blank" class="md-link">View on Vercel <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+        </div>
+    </template>
+
+    <template id="tpl-fragments">
+        <div class="md-hero">
+            <div class="md-label">Cloud · Microservice</div>
+            <h2 class="md-title">Fragment Storage Microservice</h2>
+            <p class="md-tag">Scalable fragment storage on AWS ECS with full CI/CD.</p>
+        </div>
+        <div class="md-body">
+            <p>Designed and deployed a scalable microservice for managing diverse data fragments (text, image, JSON) on AWS ECS, using S3 for storage and DynamoDB for metadata. Implemented end-to-end CI/CD with GitHub Actions to automate container builds and deployment. Engineered on-the-fly content conversion and built a full front-end client for fragment creation, manipulation, and authentication via Cognito.</p>
+            <div class="md-chips">
+                <span class="tech-chip">Node.js</span>
+                <span class="tech-chip">Express</span>
+                <span class="tech-chip">Docker</span>
+                <span class="tech-chip">AWS ECS</span>
+                <span class="tech-chip">S3</span>
+                <span class="tech-chip">DynamoDB</span>
+                <span class="tech-chip">Cognito</span>
+                <span class="tech-chip">GitHub Actions</span>
+            </div>
+        </div>
+    </template>
+
+    <template id="tpl-k8s">
+        <div class="md-hero">
+            <div class="md-label">DevOps · GitOps</div>
+            <h2 class="md-title">Kubernetes GitOps Pipeline</h2>
+            <p class="md-tag">Canary & Blue-Green deployments via Argo CD.</p>
+        </div>
+        <div class="md-body">
+            <p>Built a GitOps-based CI/CD pipeline using Argo CD, Argo Rollouts, and Argo Workflows for automated Kubernetes deployments. Implemented Canary and Blue-Green strategies with automatic rollbacks triggered by Git commits and Docker image updates.</p>
+            <div class="md-chips">
+                <span class="tech-chip">Argo CD</span>
+                <span class="tech-chip">Argo Rollouts</span>
+                <span class="tech-chip">Kubernetes</span>
+                <span class="tech-chip">Docker</span>
+                <span class="tech-chip">GitOps</span>
+            </div>
+        </div>
+    </template>
+
+    <template id="tpl-carloan">
+        <div class="md-hero">
+            <div class="md-label">Desktop · Java</div>
+            <h2 class="md-title">Car Loan System</h2>
+            <p class="md-tag">JavaFX application with MongoDB-backed loan management.</p>
+        </div>
+        <div class="md-body">
+            <p>JavaFX application with MongoDB for secure user authentication and data storage. Loan exploration, input flows, and tracking history. Database schema design across vehicles, users, and financial records.</p>
+            <div class="md-chips">
+                <span class="tech-chip">JavaFX</span>
+                <span class="tech-chip">Maven</span>
+                <span class="tech-chip">MongoDB</span>
+            </div>
+        </div>
+    </template>
+
+    <template id="tpl-library">
+        <div class="md-hero">
+            <div class="md-label">Web · Full-stack</div>
+            <h2 class="md-title">Library Management System</h2>
+            <p class="md-tag">Full-stack web app with role-based access.</p>
+        </div>
+        <div class="md-body">
+            <p>Full-stack web application using JavaScript, MongoDB, HTML/CSS, and additional frameworks. Role-based authentication providing administrators, staff, and regular users with tailored access and menus.</p>
+            <div class="md-chips">
+                <span class="tech-chip">JavaScript</span>
+                <span class="tech-chip">MongoDB</span>
+                <span class="tech-chip">HTML/CSS</span>
+            </div>
+        </div>
+    </template>
+
     <script src="script.js"></script>
 </body>
 </html>
