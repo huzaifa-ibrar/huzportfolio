@@ -87,7 +87,7 @@ function updateProgress() {
 if (!reduced && 'IntersectionObserver' in window) {
     const revealTargets = document.querySelectorAll(
         '.section-header, .about-text p, .about-text .lead-text, .about-card, ' +
-        '.timeline-item, .bento, .contact-row, .contact-form, .hl-item'
+        '.timeline-item, .bento, .contact-row, .hl-item'
     );
 
     revealTargets.forEach(el => el.classList.add('reveal'));
@@ -156,52 +156,6 @@ modal.querySelectorAll('[data-close]').forEach(el =>
 document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && modal.classList.contains('is-open')) closeModal();
 });
-
-/* ----------------------------------------------------
-   Contact Form
-   ---------------------------------------------------- */
-const contactForm = document.getElementById('contact-form');
-
-contactForm?.addEventListener('submit', (e) => {
-    e.preventDefault();
-    showToast("Thanks! I'll get back to you within a day.");
-    contactForm.reset();
-});
-
-function showToast(message) {
-    const t = document.createElement('div');
-    t.textContent = message;
-    Object.assign(t.style, {
-        position: 'fixed',
-        bottom: '30px',
-        left: '50%',
-        transform: 'translateX(-50%) translateY(20px)',
-        background: 'var(--ink-3)',
-        color: 'var(--text)',
-        border: '1px solid var(--accent-line)',
-        padding: '0.9rem 1.5rem',
-        borderRadius: '100px',
-        boxShadow: 'var(--shadow-lg)',
-        fontSize: '0.95rem',
-        fontWeight: '500',
-        zIndex: '10000',
-        opacity: '0',
-        transition: 'opacity 0.4s ease, transform 0.4s ease',
-        maxWidth: '90vw'
-    });
-    document.body.appendChild(t);
-
-    requestAnimationFrame(() => {
-        t.style.opacity = '1';
-        t.style.transform = 'translateX(-50%) translateY(0)';
-    });
-
-    setTimeout(() => {
-        t.style.opacity = '0';
-        t.style.transform = 'translateX(-50%) translateY(20px)';
-        setTimeout(() => t.remove(), 400);
-    }, 3000);
-}
 
 /* ----------------------------------------------------
    Image fallback for thum.io screenshots

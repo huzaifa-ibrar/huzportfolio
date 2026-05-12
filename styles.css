@@ -1552,15 +1552,15 @@ section { padding: 8rem 0; position: relative; }
 
 .contact-grid {
     display: grid;
-    grid-template-columns: 1fr 1.3fr;
-    gap: 3rem;
-    align-items: start;
+    grid-template-columns: 1fr;
+    max-width: 900px;
+    margin: 0 auto;
 }
 
 .contact-info {
-    display: flex;
-    flex-direction: column;
-    gap: 0.6rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.9rem;
 }
 
 .contact-row {
@@ -1647,60 +1647,6 @@ section { padding: 8rem 0; position: relative; }
     color: var(--accent);
     border-color: var(--accent-line);
     transform: translateY(-2px);
-}
-
-/* Contact form */
-.contact-form {
-    background: var(--ink-2);
-    border: 1px solid var(--border-2);
-    border-radius: var(--radius);
-    padding: 2.5rem;
-    box-shadow: var(--shadow-md);
-}
-
-.form-row {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1.2rem;
-}
-
-.form-group { margin-bottom: 1.3rem; }
-
-.form-group label {
-    display: block;
-    font-family: var(--font-mono);
-    font-size: 0.7rem;
-    color: var(--text-dim);
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    margin-bottom: 0.5rem;
-}
-
-.form-group input,
-.form-group textarea {
-    width: 100%;
-    padding: 0.9rem 1rem;
-    background: var(--ink);
-    border: 1px solid var(--border-2);
-    border-radius: var(--radius-sm);
-    color: var(--text);
-    font-family: inherit;
-    font-size: 0.96rem;
-    transition: all 0.3s var(--ease);
-    resize: vertical;
-}
-
-.form-group input:focus,
-.form-group textarea:focus {
-    outline: none;
-    border-color: var(--accent-line);
-    background: var(--ink-3);
-    box-shadow: 0 0 0 4px var(--accent-soft);
-}
-
-.form-group input::placeholder,
-.form-group textarea::placeholder {
-    color: var(--text-mute);
 }
 
 /* ----------------------------------------------------
@@ -1920,8 +1866,7 @@ section { padding: 8rem 0; position: relative; }
     .timeline-body { padding: 1.5rem 1.3rem; }
     .timeline-role { font-size: 1.3rem; }
 
-    .form-row { grid-template-columns: 1fr; }
-    .contact-form { padding: 1.8rem 1.5rem; }
+    .contact-info { grid-template-columns: 1fr; }
     .modal { padding: 1rem; }
     .modal-content { padding: 0 1.5rem 2rem; margin-top: -50px; }
     .md-title { font-size: 1.8rem; }
